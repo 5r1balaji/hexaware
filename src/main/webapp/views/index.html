@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+
+<html ng-app="app">
+<head>
+    <title>Hexaware Assignment</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="js/lib/angular.min.js"></script>
+    <script type="text/javascript" src="js/lib/angular-route.min.js"></script>
+
+    <link rel ="script" type="text/javascript"
+            href="js/lib/bootstrap.min.js"/>
+    <link rel="stylesheet" type="text/css"
+          href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css"
+          href="css/login.css" />
+    <script type="text/javascript" src="js/cloudapp/controllers/controller.js"></script>
+</head>
+<body ng-controller="controller">
+<div class="login-page">
+    <div class="form" ng-hide="register">
+        <form class="register-form">
+            <input type="text" placeholder="name" />
+            <input type="password" placeholder="password" />
+            <input type="text" placeholder="email address"/>
+            <button>create</button>
+            <p class="message">Already registered? <a href="#" >Sign In</a></p>
+        </form>
+        <form class="login-form" ng-submit="signIn()">
+            <input type="text" placeholder="username" ng-model="userName"/>
+            <input type="password" placeholder="password" ng-model="password"/>
+            <button type="submit" >login</button>
+            <p class="message">Not registered? <a href="#!red">Create an account</a></p>
+        </form>
+    </div>
+
+
+</div>
+
+
+
+</body>
+</html>
+
+

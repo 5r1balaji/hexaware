@@ -1,0 +1,32 @@
+<html ng-app="app">
+<head>
+    <script type="text/javascript" src="js/lib/angular.min.js"></script>
+    <script type="text/javascript" src="js/lib/angular-route.min.js"></script>
+    <link rel ="script" type="text/javascript"
+          href="js/lib/bootstrap.min.js"/>
+    <link rel="stylesheet" type="text/css"
+          href="css/bootstrap.min.css" />
+    <script type="text/javascript" src="js/cloudapp/controllers/controller.js"></script>
+</head>
+<body>
+<div ng-controller="loginController" style="width:400px; margin:200 auto;">
+    <table  border="1" ng-init="getSession()">
+        <th>Id</th>
+        <th>Technology Component</th>
+        <th>Rating</th>
+        <tr ng-repeat="user in userScores">
+            <td>{{user.scoreId}}</td>
+            <td>{{user.area.technologyArea}}</td>
+            <td>{{user.score}}</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+
+<script type="text/javascript" src="js/cloudapp/controllers/loginController.js"></script>
+</html>
+
+
+
+
